@@ -6,10 +6,16 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+        
+        <meta name="url" content="{{ url('').'/'.config('chatify.routes.prefix') }}" data-user="{{ Auth::user()->id }}">
+        {{-- scripts --}}
+        <script src="{{ asset('js/chatify/font.awesome.min.js') }}"></script>
+        <script src="{{ asset('js/chatify/autosize.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        {{-- styles --}}
+        <link href="{{ asset('css/chatify/style.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -32,5 +38,7 @@
                 {{ $slot }}
             </main>
         </div>
+        <script src="{{ asset('js/chatify/utils.js') }}"></script>
+        <script src="{{ asset('js/chatify/code.js') }}"></script>
     </body>
 </html>
