@@ -11,11 +11,9 @@
         {{-- scripts --}}
         <script src="{{ asset('js/chatify/font.awesome.min.js') }}"></script>
         <script src="{{ asset('js/chatify/autosize.js') }}"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
 
         {{-- styles --}}
         <link href="{{ asset('css/chatify/style.css') }}" rel="stylesheet" />
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -39,6 +37,5 @@
             </main>
         </div>
         <script src="{{ asset('js/chatify/utils.js') }}"></script>
-        <script src="{{ asset('js/chatify/code.js') }}"></script>
     </body>
 </html>

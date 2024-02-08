@@ -11,7 +11,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-4 sm:p-8 text-gray-900 dark:text-gray-100">
                     <div class="avatar av-l chatify-d-flex"
-                     style="background-image: url('{{ Chatify::getUserWithAvatar(Auth::user())->avatar }}');"
+                     style="background-image: url('{{ asset('storage/users-avatar/'.Auth::user()->avatar) }}');"
                     >
                     </div>
                     
